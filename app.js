@@ -52,12 +52,7 @@ let game = () => {
         computerSelection = computerPlay();
         console.log(`Player plays:      ${playerSelection}`)
         console.log(`Computer plays:    ${computerSelection}`);
-        if (findWinner(playerSelection, computerSelection) == 1) {
-            playerScore++;
-        }
-        if (findWinner(playerSelection, computerSelection) == 0) {
-            computerScore++;
-        }
+        findWinner(playerSelection, computerSelection) == true ? playerScore++ : computerScore++;
     }
 
     if (playerScore == 5) {
